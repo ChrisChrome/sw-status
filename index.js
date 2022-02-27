@@ -20,7 +20,7 @@ const colors = {
 hook.on("rateLimit", () => {
 	console.log("I'm being rate limited!!!");
 })
-
+var limit = false
 hook.fetchMessage(config.discord.message_id).then((msg1) => {
 	msg = msg1
 	app.listen(config.stormworks.web_port, () => {
@@ -35,7 +35,11 @@ hook.fetchMessage(config.discord.message_id).then((msg1) => {
 	});
 	var onlinecheck = null
 	app.get("/data", (req, res) => {
-		console.log(req.query)
+		if(limit) return res.sendStatus(429).end();
+		limit = true
+		setTimeout(() => {
+			limit = false
+		}, 5000);
 		clearInterval(onlinecheck);
 		onlinecheck = setTimeout(() => {
 			hook.editMessage(msg, hook.editMessage(msg, {
