@@ -1,15 +1,15 @@
 {
 	"discord": {
-		"webook-url": "",
-		"message-id": ""
+		"webook_url": "",
+		"message_id": ""
 	},
 	"stormworks": {
-		"server-name": "My Stormworks Server",
-		"max-players": 12,
-		"web-port": 9296,
-		"tps-warn-level": 40,
-		"color-norm": "#2ecc71",
-		"color-warn": "#f1c40f",
-		"color-offl": "#e74c3c"
+		"server_name": "My Stormworks Server",
+		"max_players": 12,
+		"web_port": 9296,
+		"tps_warn_level": 40,
+		"color_norm": "#2ecc71",
+		"color_warn": "#f1c40f",
+		"color_offl": "#e74c3c"
 	}
 }
